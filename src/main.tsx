@@ -1,10 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import Login from './assets/router/public/Login.tsx'
 import './index.css'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Dashboard from './assets/router/private/Dashboard.tsx'
+
+
+interface PrivateRouteProps {
+  redirect: string;
+  children: React.ReactNode;
+}
+
+const PrivateRoute=({redirect, children}:PrivateRouteProps)=>{
+  const authenticated:boolean = localStorage.getItem("token") !== null;
+  return authenticated ? children : <Navigate to={redirect} />;
+}
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        {/* PRIVATE ROUTES */}
+        <Route path='/dashboard' element={<PrivateRoute redirect='/'>
+          <Dashboard/>
+        </PrivateRoute>} />
+        {/* PUBLIC ROUTES */}
+        <Route path='/' element={<Login/>} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
 )

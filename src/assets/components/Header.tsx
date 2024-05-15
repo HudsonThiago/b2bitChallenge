@@ -1,14 +1,18 @@
 import { ComponentProps } from "react";
+import { useNavigate } from "react-router-dom";
 
-interface InputProps extends ComponentProps<'input'> {
-  text: React.ReactNode | string;
-}
+export const Header=()=> {
 
-export default function Header() {
+  const navigate = useNavigate();
+
+  const logout=()=>{
+    localStorage.removeItem("token");
+    navigate("/");
+  }
 
   return (
     <div className=" bg-white w-full flex justify-end p-4 pr-10">
-        <button className=" bg-primary text-white w-80 p-3 font-normal rounded-md">
+        <button onClick={()=>logout()} className=" bg-primary text-white w-80 p-3 font-normal rounded-md select-none">
             Logout
         </button>
     </div>
