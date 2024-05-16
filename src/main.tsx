@@ -21,11 +21,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         {/* PRIVATE ROUTES */}
-        <Route path='/dashboard' element={<PrivateRoute redirect='/'>
+        <Route path='/b2bitChallenge/dashboard' element={<PrivateRoute redirect='/b2bitChallenge'>
           <Dashboard/>
         </PrivateRoute>} />
         {/* PUBLIC ROUTES */}
-        <Route path='/' element={<Login/>} />
+        <Route path='/b2bitChallenge' element={<Login/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

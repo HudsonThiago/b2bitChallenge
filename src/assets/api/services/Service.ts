@@ -10,6 +10,11 @@ let config = {
         'Content-Type': 'application/json'
     }
   }
+
 export async function login(loginDTO:LoginDTO) {
     return axiosAPI.post('/login/', loginDTO, config);
+}
+  
+export async function getProfile() {
+    return axiosAPI.get('/profile/', config);
 }

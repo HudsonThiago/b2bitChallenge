@@ -21,6 +21,22 @@ export default {
       primary: '#02274F',
       input:'#F1F1F1',
     },
+    extend: {
+      keyframes: {
+        openModal: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        closeModal: {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 },
+        }
+      },
+      animation: {
+        openModal: 'openModal 0.5s ease-in-out forwards',
+        closeModal: 'closeModal 0.5s ease-in-out forwards',
+      }
+    }
   },
   plugins: [],
 }
