@@ -12,6 +12,7 @@ export default {
       current: 'currentColor',
       red: colors.red,
       slate: colors.slate,
+      amber: colors.amber,
       white: '#FFFFFF',
       bg1: '#FAFAFA',
       bg2: '#F1F5F9',

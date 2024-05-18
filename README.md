@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+# b2bit Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This is a project that was proposed as a challenge for the b2bit selection process. Here it simulates a web system that uses http methods so the user, previously registered in the system, can be authenticated and have access to their profile.
 
-Currently, two official plugins are available:
+web application deploy: [[Click here]](hthttps://hudsonthiago.github.io/b2bitChallenge/)
+## Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Node (v18.17.0)](https://nodejs.org/en)
+- [Vite (React v18.2.0)](https://vitejs.dev/)
 
-## Expanding the ESLint configuration
+#### Extensions 
+- [tailwindCSS (v3.4.3)](https://tailwindcss.com/)
+- [axios (v1.6.8)](https://axios-http.com/ptbr/docs/intro)
+- [react router dom (v6.23.1)](https://reactrouter.com/en/main)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## How to run
 
-- Configure the top-level `parserOptions` property like this:
+```
+ git clone https://github.com/HudsonThiago/b2bitChallenge.git
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+ cd b2bitChallenge
+
+ npm install
+
+ npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## How to use
+First, you will be directed to the route.
+```
+http://localhost:5173/b2bitChallenge
+```
+
+There will be a login form. To access the dashboard page, simply enter the following credentials:
+
+```
+login: cliente@youdrive.com
+password: password
+```
+After you enter the data you will be authenticated and redirected to the dashboard page. If the user tries to enter the login page again, they will be redirected to the dashboard screen. The user will only exit if they press the "logout" button.
