@@ -3,7 +3,7 @@
 ## Description
 This is a project that was proposed as a challenge for the b2bit selection process. Here it simulates a web system that uses http methods so the user, previously registered in the system, can be authenticated and have access to their profile.
 
-web application deploy: [[Click here]](hthttps://hudsonthiago.github.io/b2bitChallenge/)
+web application deploy: [[Click here]](https://hudsonthiago.github.io/b2bitChallenge/)
 ## Technologies
 
 - [Node (v18.17.0)](https://nodejs.org/en)
